@@ -1,0 +1,11 @@
+
+_voxl-configure-vision-hub(){
+	local OPTS=('help enable factory_enable factory_enable_figure_eight factory_enable_no_figure_eight factory_enable_backtrack factory_enable_vfc_fpv factory_enable_vfc_fpv_flow factory_enable_vfc_starling_flow factory_enable_vfc_starling factory_enable_vfc_pos_back_flow  factory_enable_vfc_pos_back_flow_steam_deck disable factory_disable')
+	COMPREPLY=()
+	if [ "$COMP_CWORD" -eq 1 ]; then
+		COMPREPLY=( $(compgen -W '${OPTS}' -- ${COMP_WORDS[COMP_CWORD]}) )
+		return 0
+	fi
+}
+
+complete -F _voxl-configure-vision-hub voxl-configure-vision-hub

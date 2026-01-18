@@ -1,0 +1,11 @@
+Package: voxl-vision-hub
+Version: 1.8.21
+Section: base
+Priority: optional
+Architecture: arm64
+Depends: librc-math,libmodal-pipe(>=2.10.0),libmodal-json,voxl-mpa-tools(>=0.2.5),voxl-mavlink-server,libmodal-cv(>=0.4.0)
+Conflicts: voxl-vision-px4,voxl-mavlink-server(<<1.0.0)
+Replaces: voxl-vision-px4
+Provides: voxl-vision-px4
+Maintainer: James Strawson <james@modalai.com>
+Description: main hub managing communication between VOXL MPA services and autopilots

@@ -1,0 +1,17 @@
+# Copyright (c) 2025 ModalAI, Inc.
+
+[Unit]
+Description=voxl-vision-hub
+SourcePath=/usr/bin/voxl-vision-hub
+After=voxl-wait-for-fs.service
+Requires=voxl-wait-for-fs.service
+
+[Service]
+User=root
+Type=simple
+PIDFile=/run/voxl-vision-hub.pid
+ExecStart=/usr/bin/voxl-vision-hub
+
+[Install]
+WantedBy=multi-user.target
+
